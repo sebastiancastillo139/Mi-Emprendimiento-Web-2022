@@ -1,0 +1,14 @@
+body{
+    width: 100%;
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    font-family: $ubuntu;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    grid-column: span 12;
+}

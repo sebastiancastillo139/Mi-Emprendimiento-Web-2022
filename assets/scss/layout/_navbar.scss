@@ -1,0 +1,83 @@
+.navbar{
+    grid-column: span 12;
+    grid-row: span 1;
+    position: relative;
+    max-width: 100%;
+    height: 6em;
+    padding: 1em;
+    background-color: black;
+    color: white;
+    display: flex;
+    font-family: $poppins;
+    &__logo{
+        max-height: 5em;
+        max-width: auto;
+        img{
+            max-height: 4em;
+            margin: 1em;
+        }
+    }
+    &__menu{
+        margin-right: 1em;
+        margin-left: auto;
+        ul{
+            display: none;
+          }
+        input:checked  ~ ul{
+            display:table-header-group;
+            position: sticky;
+            box-sizing: border-box;
+            width: 100%;
+            background-color: black;
+            top: 6em;
+          }
+        input:checked  ~ li{
+        display:inline-block;
+        position: relative;
+        background-color: black;
+        }
+        input:checked ~ label{
+            color: $orange;
+            float: right;
+        }
+        input {
+            display: none;
+        }
+        label {
+            box-sizing: border-box;
+            display: inline-block;
+            width: 3em;
+            height: 3em;
+            font-size: 3em;
+            line-height: 2em;
+            margin-left: auto;
+            margin-right: 0.5em;
+            font-weight: bold;
+            text-align: center;
+            color: $white;
+        }
+        li {
+            display: inline-block;
+            font-size: large;
+            font-weight: 700;
+            margin: 1em;
+            padding: 1em;
+            list-style: none;
+            a{
+                text-decoration: none;
+                color: #ffffff;
+                &:hover{
+                    color: $orange;
+                }
+            }
+        }
+        @media screen and (min-width:570px) {
+            ul{
+                display: inline-block;
+            }
+            label{
+                display: none;
+            }
+        }
+    }
+}
